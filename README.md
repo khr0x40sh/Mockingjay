@@ -83,4 +83,6 @@ Based off this repo: [https://github.com/pwnsauc3/RWXfinder] and data from the w
 
 USAGE: > mrwxfinder.exe (folder path)
 
-   ex: > rwxfinder.exe "C:\\Program Files (x86)\\"
+   ex: > rwxfinder.exe "..\\VS2022-binaries\\"
+
+![image](https://github.com/khr0x40sh/Mockingjay/assets/6656699/eb559642-8b6b-4b86-a45f-0240340441fd)
