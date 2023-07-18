@@ -146,7 +146,7 @@ int main(int argc, char* argv[])
     }
 
 #ifdef _DEBUG
-    printf("[-] Size of key: %d", (sizeof(keyy) / sizeof(keyy[0])));
+    printf("[!] Size of key: %d\n", (sizeof(keyy) / sizeof(keyy[0])));
 #endif
 
     for (int j = 0; j < clen - 1; j++)

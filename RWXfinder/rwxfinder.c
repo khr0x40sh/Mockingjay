@@ -89,7 +89,9 @@ void CheckDLLForRWX(const char* dllPath)
     }
     else
     {
+#ifdef _DEBUG
         printf("%s\n", dllPath);
+#endif
     }
 
     UnmapViewOfFile(fileView);
@@ -136,7 +138,7 @@ void TraverseDirectory(const char* directory)
     }
 }
 
-int main(int argc, char* argv)
+int main(int argc, char* argv[])
 {
     if (argc != 2)
     {
@@ -144,9 +146,11 @@ int main(int argc, char* argv)
         return 1;
     }
     // Setting PATH to check
-    SetDllDirectory("C:\\Program Files (x86)");
-
-    TraverseDirectory(argv[1]);
+    SetDllDirectory("C:\\Program Files(x86)");
+#ifdef _DEBUG
+    printf("[!] Searching for RWX DLLS in %s\n",TEXT(argv[1]));
+#endif
+    TraverseDirectory(TEXT(argv[1]));
 
     return 0;
 }
